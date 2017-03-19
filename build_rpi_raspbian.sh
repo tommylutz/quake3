@@ -3,6 +3,13 @@
 # invoke with ./build.sh
 # or ./build.sh clean to clean before build
 
+if dpkg --get-selections | grep libsdl1.2-dev; then
+    echo "Found libsdl1.2-dev package installed...good"
+else
+    echo "Warning: you may need to do sudo apt-get install libsdl1.2-dev before building"
+    read
+fi
+
 # directory containing the ARM shared libraries (rootfs, lib/ of SD card)
 # specifically libEGL.so and libGLESv2.so
 ARM_LIBS=/opt/vc/lib
