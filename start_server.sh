@@ -16,7 +16,7 @@ fi
 
 if [[ ! -e $SCRIPTDIR/build/release-linux-arm/baseq3/server.cfg ]]; then
     echo "Symlinking $SCRIPTDIR/server-config-files/*.cfg to $SCRIPTDIR/build/release/linux-arm/baseq3"
-    ln -s $SCRIPTDIR/server-config-files/*.cfg $SCRIPTDIR/build/release/linux-arm/baseq3
+    ln -s $SCRIPTDIR/server-config-files/*.cfg $SCRIPTDIR/build/release-linux-arm/baseq3
 fi
 
 if [[ -z "$1" ]]; then
